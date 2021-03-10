@@ -1,0 +1,13 @@
+# Mac OS
+.DS_Store
+
+# Terraform
+.terraform/
+*.conf
+*.tfplan
+*.tfstate
+*.tfstate.backup
+*.lock.hcl
+
+# Misc.
+*.log
