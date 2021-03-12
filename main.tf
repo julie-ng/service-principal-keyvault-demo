@@ -13,7 +13,7 @@ resource "random_string" "suffix" {
 # ----
 
 module "demo" {
-  source = "./service-principal-kv"
+  source = "./modules/service-principal-kv"
   name   = "tf-kv-demo"
   suffix = random_string.suffix.result
 }
