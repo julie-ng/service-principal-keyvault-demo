@@ -16,11 +16,11 @@ This code example…
 
 1. Creates an **[Azure Resource Group](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/overview#understand-scope)**
 2. Creates an **[Azure Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/general/basic-concepts)**
-  - give current ARM client access to manage secrets in the Key Vault (in order to save secrets)
+   - give current ARM client access to manage secrets in the Key Vault (in order to save secrets)
 3. Creates a new **[Azure Service Principal (SP)](https://docs.microsoft.com/en-us/azure/active-directory/develop/app-objects-and-service-principals)**
-  - store SP client ID in Key Vault
-  - store SP client secret in Key Vault
-  - scope SP to resource group
+     - store SP client ID in Key Vault
+     - store SP client secret in Key Vault
+     - scope SP to resource group
 
 Note: a randomly generated suffix is included in resource names because Key Vault names must be globally unique.
 
@@ -72,8 +72,8 @@ Then compare with the result in Key Vault, which should be the same:
 
 ```
 az keyvault secret show \
-	--name demo-secret \
-	--vault $(terraform output key_vault_name | tr -d '"') | jq '.value'
+    --name demo-secret \
+    --vault $(terraform output key_vault_name | tr -d '"') | jq '.value'
 ```
 
 Note that because this example creates random suffixes, we also need to ask Terraform for the key vault name.
