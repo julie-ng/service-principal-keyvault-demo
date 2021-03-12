@@ -64,13 +64,13 @@ terraform apply plan.tfplan
 
 First see which secret Terraform used for the service principal 
 
-```
+```bash
 terraform output demo_secret
 ```
 
 Then compare with the result in Key Vault, which should be the same:
 
-```
+```bash
 az keyvault secret show \
     --name demo-secret \
     --vault $(terraform output key_vault_name | tr -d '"') | jq '.value'
