@@ -2,7 +2,7 @@
 .DS_Store
 
 # Terraform
-.terraform/
+.terraform*
 *.conf
 *.tfplan
 *.tfstate
