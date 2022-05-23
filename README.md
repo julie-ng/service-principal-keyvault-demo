@@ -4,13 +4,14 @@ Infrastructure as Code example using [Terraform](https://terraform.io) to create
 
 ## Use Case
 
-Mass automation of creation of Service Principals a common use case for central IT teams.
+- Mass automation of creation of Service Principals a common use case for central IT teams.
+- Advantage: save service principal password expiration in Key Vault to setup other automation to rotate secrets
 
 ### Why Terraform?
 
 ARM templates cannot create service principals, which is an Azure AD resource. Instead of creating them with CLI and querying JSON outputs, we will just use Terraform.
 
-### What Resources are Created?
+## What Resources are Created?
 
 This code example…
 
